@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/wilmarpulido91/tambourine-test#readme",
   "dependencies": {
-    "gulp": "^5.0.0"
+    "gulp": "^5.0.0",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.4",
     "gulp-sass": "^6.0.1",
     "sass": "^1.87.0"
   }
