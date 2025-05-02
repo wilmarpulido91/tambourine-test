@@ -6,7 +6,7 @@ window.onload = function(){
           prevEl: ".swiper-button-prev",
         },
         on: {
-            init: initSliderNumber('01')
+            init: [initSliderNumber('01'), setImageSlider()]
         },
     });
 
@@ -18,5 +18,13 @@ window.onload = function(){
     function initSliderNumber(value) {
         let numberElement = document.querySelector('.slider-number');
         numberElement.innerHTML = value;
+    }
+
+    function setImageSlider() {
+        let sliderImagesElem = Array.from(document.querySelectorAll('.slider-image'));
+
+        sliderImagesElem.map((e, i) => {
+            e.style.backgroundImage = `url('img/locations-slider-${i + 1}.jpg`;
+        });
     }
 }

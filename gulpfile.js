@@ -1,6 +1,6 @@
 const { gulp, watch, parallel, src, dest } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const sync = require("browser-sync").create();
+const sync = require("browser-sync").create(); 
 
 function buildHTML() {
   return src('./src/index.html')
@@ -19,7 +19,7 @@ function buildStyles() {
 };
 
 function buildImages() {
-  return src(['./src/img/**.jpg', './src/img/**.png'])
+  return src(['./src/img/**.jpg', './src/img/**.png'], { encoding: false })
     .pipe(dest('output/img'));
 }
 

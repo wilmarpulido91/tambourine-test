@@ -137,4 +137,4 @@ dist
 
 # Archivos propios
 package-lock.json
-.output/
+output/
