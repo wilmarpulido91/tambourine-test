@@ -1,111 +1,189 @@
 .section-locations {
-    padding: 106px 0 90px;
-    background-color: #98A684;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../img/fondo.jpg');
+  padding: 106px 0 90px;
+  background-color: #98A684;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../img/fondo.jpg');
 
+  .slider {
+    .swiper-slide {
+      position: relative;
+      display: grid;
+      align-items: stretch;
+      grid-template-columns: 1fr;
+          
+      .slider-info {
+        text-align: left;
+        padding: 70px 40px;
+        background-color: #fff;
+        box-shadow: 20px 10px 50px #0000002F;
+
+        span {
+          color: #98A684;
+          font-size: 14px;
+          letter-spacing: 0.35px;
+          text-transform: uppercase;
+        }
+
+        h2 {
+          font-family: Cardo;
+          font-size: 60px;
+          color: #3C3C3C;
+          letter-spacing: -1.29px;
+          margin: 15px 0;
+        }
+
+        p {
+          font-family: "Source Sans 3", sans-serif;
+          font-size: 16px;
+          color: #1B1B1B;
+          letter-spacing: 0px;
+          line-height: 30px;
+        }
+      }
+  
+      .slider-image {
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: calc(50% + 70px);
+      transform: translate(-50%, -50%);
+
+      &::after {
+        content: '';
+        border-style: solid;
+        position: absolute;
+      }
+
+      &::before {
+        content: "";
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        background-color: #000;
+      }
+    }
+
+    .swiper-button-prev {
+      left: calc(100% - 140px);
+
+      &::before {
+        top: 21px;
+        left: 18px;
+      }
+
+      &::after {
+        border-width: 6px 10px 6px 0;
+        border-color: transparent #000000 transparent transparent;
+      }
+    }
+
+    .swiper-button-next {
+      &::before {
+        top: 21px;
+        left: -20px;
+      }
+      
+      &::after {
+        border-width: 6px 0 6px 10px;
+        border-color: transparent transparent transparent #000000;
+      }
+    }
+  }
+
+  .slider-number {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 120px;
+    color: #fff;
+    font-family: Cardo;
+    z-index: 999;
+  }
+}
+
+/* Media Querys */
+@media only screen and (min-width: 600px) {
+  .section-locations {
     .slider {
-        .swiper-slide {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: stretch;
-            position: relative;
-            
-            .slider-info {
-                text-align: left;
-                padding: 148px 99px;
-                background-color: #fff;
-    
-                span {
-                    color: #98A684;
-                    font-size: 14px;
-                    letter-spacing: 0.35px;
-                    text-transform: uppercase;
-                }
-    
-                h2 {
-                    font-family: Cardo;
-                    font-size: 60px;
-                    color: #3C3C3C;
-                    letter-spacing: -1.29px;
-                    margin: 15px 0;
-                }
-    
-                p {
-                    font-family: "Source Sans 3", sans-serif;
-                    font-size: 16px;
-                    color: #1B1B1B;
-                    letter-spacing: 0px;
-                    line-height: 30px;
-                }
-            }
-    
-            .slider-image {
-                background-size: cover;
-                background-position: center;
-            }
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: calc(50% + 25px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-locations {
+    .slider {
+      .swiper-slide {
+        grid-template-columns: 1fr 1fr;
+
+        .slider-info {
+          padding: 100px 60px;
         }
 
-        .swiper-button-next,
-        .swiper-button-prev {
-            bottom: auto;
-            left: auto;
-            transform: translate(-50%, -50%);
-
-            &::after {
-                content: '';
-                border-style: solid;
-                position: absolute;
-            }
-
-            &::before {
-                content: "";
-                width: 30px;
-                height: 2px;
-                position: absolute;
-                background-color: #000;
-            }
+        .slider-image {
+          height: 100%;
         }
+      }
 
-        .swiper-button-prev {
-            top: calc(100% - 20px);
-            right: calc(50% + 115px);
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: calc(100% - 25px);
+      }
 
-            &::before {
-                top: 21px;
-                left: 18px;
-            }
+      .swiper-button-prev {
+        left: 30%;
+      }
 
-            &::after {
-                border-width: 6px 10px 6px 0;
-                border-color: transparent #000000 transparent transparent;
-            }
-        }
-
-        .swiper-button-next {
-            top: calc(100% - 20px);
-            right: calc(50% + 20px);
-
-            &::before {
-                top: 21px;
-                left: -20px;
-            }
-            
-            &::after {
-                border-width: 6px 0 6px 10px;
-                border-color: transparent transparent transparent #000000;
-            }
-        }
+      .swiper-button-next {
+        left: 45%;
+      }
     }
 
     .slider-number {
-        position: absolute;
-        bottom: -35px;
-        right: -30px;
-        font-size: 200px;
-        color: #fff;
-        font-family: Cardo;
-        z-index: 999;
+      font-size: 150px;
+      transform: none;
+      left: calc(100% - 160px);
     }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-locations {
+    .slider {
+      .swiper-button-prev {
+        left: 35%;
+      }
+
+      .swiper-button-next {
+        left: 45%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .section-locations {
+    .slider {
+      .swiper-slide {
+        .slider-info {
+          padding: 148px 99px;
+        }
+      }
+    }
+
+    .slider-number {
+      font-size: 200px;
+      left: calc(100% - 160px);
+    }
+  }
 }

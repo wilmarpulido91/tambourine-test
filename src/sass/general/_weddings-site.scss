@@ -56,18 +56,18 @@
 /* Media Querys */
 @media only screen and (min-width: 768px) {
   .container {
-    width: calc(768px - 30px);
+    width: calc(768px - 50px);
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .container {
-    width: calc(1024px - 30px);
+    width: calc(1024px - 50px);
   }
 }
 
 @media only screen and (min-width: 1920px) {
   .container {
-    width: calc(1920px - 30px);
+    width: calc(1920px - 50px);
   }
 }
