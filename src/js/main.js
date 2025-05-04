@@ -24,7 +24,7 @@ window.onload = function(){
         let sliderImagesElem = Array.from(document.querySelectorAll('.slider-image'));
 
         sliderImagesElem.map((e, i) => {
-            e.style.backgroundImage = `url('img/locations-slider-${i + 1}.jpg`;
+            e.style.backgroundImage = `url('img/locations-slider-${i + 1}.png`;
         });
     }
 }
