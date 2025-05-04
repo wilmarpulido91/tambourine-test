@@ -1,3 +1,5 @@
+@use '../utilities/variables' as variables;
+
 .section-menus {
   padding: 106px 0 90px;
   
@@ -18,7 +20,7 @@
       padding:  70px 15px;
 
       span {
-        color: #98A684;
+        color: variables.$primary_color;
         font-size: 14px;
         font-weight: 500;
         letter-spacing: 0.35px;
@@ -30,15 +32,16 @@
         font-size: 60px;
         font-weight: normal;
         line-height: 70px;
-        color: #3C3C3C;
+        color: variables.$font_secundary_color;
         letter-spacing: -1.29px;
         margin: 26px 0 19px;
+        padding-right: 29px;
       }
 
       p {
         font-family: "Source Sans 3", sans-serif;
         font-size: 16px;
-        color: #1B1B1B;
+        color: variables.$font_primary_color;
         letter-spacing: 0px;
         line-height: 30px;
         margin-bottom: 39px;
@@ -46,10 +49,10 @@
 
       button {
         border: none;
-        color: #ffffff;
+        color: variables.$white;
         border-radius: 0px;
         padding: 18px 53px;
-        background-color: #98A684;
+        background-color: variables.$primary_color;
         text-transform: uppercase;
         font-family: "Work Sans", sans-serif;
         font-weight: 600;
@@ -58,7 +61,7 @@
         letter-spacing: 2.1px;
 
         &:hover {
-          background-color: #1B1B1B;
+          background-color: variables.$font_primary_color;
         }
       }
     }
@@ -68,7 +71,7 @@
 /* Media Querys */
 @media only screen and (min-width: 1024px) {
   .section-menus {
-    padding: 189px 0 203px 0;
+    padding: 172px 0 203px 0;
 
     .container--menus {
       flex-direction: row;
@@ -80,6 +83,10 @@
       .menus-text {
         width: calc(50% - 120px);
         padding: 40px 60px;
+
+        h2 {
+          padding-right: 50px;
+        }
       }
     }
   }
@@ -87,10 +94,25 @@
 
 @media only screen and (min-width: 1280px) {
   .section-menus {
-.container--menus {
+    .container--menus {
       .menus-text {
+        max-width: 379px;
         width: calc(50% - 210px);
         padding: 60px 105px;
+
+        h2 {
+          padding-right: 62px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .section-menus {
+    .container--menus {
+      .menus-image {
+        width: 720px;
       }
     }
   }

@@ -34,7 +34,7 @@ function browserSync() {
   watch('src/js/**.js', buildJs);
   watch('src/sass/**/**.scss', buildStyles);
   watch(['./src/img/**.jpg', './src/img/**.png'], buildImages);
-  watch(["./output/**.html", './output/**.js', "./output/css/**.css"]).on('change', sync.reload);
+  watch(["./output/**.html", './output/js/**.js', "./output/css/**.css"]).on('change', sync.reload);
 }
 
 exports.build = parallel(buildHTML, buildJs, buildStyles, buildImages);

@@ -1,3 +1,5 @@
+@use '../utilities/variables' as variables;
+
 .section-amenities {
   padding-top: 132px;
   padding-bottom: 90px;
@@ -5,7 +7,7 @@
   .amenities {
     margin-top: 46px;
     padding-bottom: 75px;
-    border-bottom: 2px solid #98A684;
+    border-bottom: 2px solid variables.$primary_color;
 
     .amenities-list {
       display: flex;
@@ -21,14 +23,28 @@
         flex-direction: column;
         font-size: 20px;
         font-family: "Source Sans 3", sans-serif;
-        padding-inline-start: calc(40px - 15px);
+        padding-inline-start: 15px;
+        list-style: none;
   
         &:not(:last-child) {
           margin-bottom: 30px;
         }
-  
-        li::marker {
-          color: #98A684;
+
+        li {
+          text-align: center;
+          position: relative;
+
+          &::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            top: 50%;
+            left: -15px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: variables.$primary_color;
+            transform: translate(0, -50%);
+          }
         }
   
         li:not(:last-child) {
@@ -52,7 +68,21 @@
           &:not(:last-child) {
             margin-bottom: 0;
           }
+
+          li {
+            text-align: left;
+          }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .section-amenities {
+    .amenities {
+      .amenities-list {
+        gap: 35px;
       }
     }
   }
